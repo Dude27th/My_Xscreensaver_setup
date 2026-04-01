@@ -62,7 +62,23 @@ echo "Xscreensaver should be installed now!"
 sudo apt install mpv
 echo "Mpv should be installed now!"
 
-##WIP COPY PASTE SCREENSAVER FILES
+                        ##WIP COPY PASTE SCREENSAVER FILES
+
+mkdir /home/$USER/Screensavers_Custom
+#Add Windows 98 "Travel" Screensaver
+cp Travel.mp4 /home/$USER/Screensavers_Custom/Travel.mp4
+sed -i 's@programs:@programs:	"Win98_Travel" 	mpv --start=00:00:00 \--no-stop-screensaver --fs \--wid=$XSCREENSAVER_WINDOW \/home/hp/ScreenSavers/Travel.mp4 \n\@' /home/$USER/.xscreensaver    
+#Don't know if the path is correct :c
+
+#Add Windows 95 "Mistery" Screensaver
+#Add Windows 95 "Jungle" Screensaver
+#Add Windows 95 "Flying_Windows" Screensaver
+#Add Windows 95 "3D_Flying_Objects" Screensaver
+#Add Windows 95 "Space_Station" Screensaver
+#Add Windows 95 "Starfield" Screensaver
+#Add Windows 95 "Underwater" Screensaver
+
+                      ##Need to test this before proceeding! :3
 
 
 
