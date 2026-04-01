@@ -36,14 +36,13 @@ echo "Exec=xscreensaver -no-splash" >> XScreensaver_temp_setup.desktop
 echo "X-GNOME-Autostart-enabled=true" >> XScreensaver_temp_setup.desktop
 echo "NoDisplay=false" >> XScreensaver_temp_setup.desktop
 echo "Hidden=false" >> XScreensaver_temp_setup.desktop
-echo "Name[es_CL]=XScreensaver" >> XScreensaver_temp_setup.desktop
-echo "Comment[es_CL]=Xscreensaver launcher" >> XScreensaver_temp_setup.desktop
+echo "Name=XScreensaver" >> XScreensaver_temp_setup.desktop
+echo "Comment=Xscreensaver launcher" >> XScreensaver_temp_setup.desktop
 echo "X-GNOME-Autostart-Delay=35" >> XScreensaver_temp_setup.desktop
-#"[es_CL]" could be a variable, need to check if that could be an issue
 
 #Add as Startup
 sudo cp XScreensaver_temp_setup.desktop /home/$USER/.config/autostart/XScreensaver.desktop
-#User is a variable, hope I'm invoking correclty the directory !!!!!!!
+#User is a variable, hope I'm invoking correctly the directory !!!!!!!
 
 #Remove temporal setup file
 rm -f XScreensaver_temp_setup.desktop
