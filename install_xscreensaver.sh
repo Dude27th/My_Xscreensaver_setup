@@ -64,10 +64,9 @@ echo "Mpv should be installed now!"
                         ##WIP COPY PASTE SCREENSAVER FILES
 
 mkdir /home/$USER/Screensavers_Custom
-#Add Windows 98 "Travel" Screensaver
+#Copy and Add Windows 98 "Travel" Screensaver
 cp Travel.mp4 /home/$USER/Screensavers_Custom/Travel.mp4
-sed -i 's@programs:@programs:	"Win98_Travel" 	mpv --start=00:00:00 \--no-stop-screensaver --fs \--wid=$XSCREENSAVER_WINDOW \/home/hp/ScreenSavers/Travel.mp4 \n\@' ~/.xscreensaver   
-#Don't know if the path is correct :c
+sudo sed -i "s,programs:,&\n  "'"Win98_Travel"'" mpv --start=00:00:00 \\\\ \n --no-stop-screensaver --fs \\\\ \n--wid=$""XSCREENSAVER_WINDOW \\\\ \n /home/$USER/Screensavers_Custom/Travel.mp4 \\\\n\\\\ ,g"  ~/.xscreensaver    
 
 #Add Windows 95 "Mistery" Screensaver
 #Add Windows 95 "Jungle" Screensaver
@@ -76,6 +75,32 @@ sed -i 's@programs:@programs:	"Win98_Travel" 	mpv --start=00:00:00 \--no-stop-sc
 #Add Windows 95 "Space_Station" Screensaver
 #Add Windows 95 "Starfield" Screensaver
 #Add Windows 95 "Underwater" Screensaver
+
+#Create A Help file
+echo "YOU CAN ADD YOUR OWN SCREENSAVERS!" > Add_Your_Own_Screensavers_temp.txt
+echo "" >> Add_Your_Own_Screensavers_temp.txt
+echo "XScreensaver also supports .mp4 videos (trough mpv Media Player) as Screensavers so anything can be a screensaver as long as it's recorded" >> Add_Your_Own_Screensavers_temp.txt
+echo "Just copy your .mp4 file in this folder and add the path of the video and parameters to the XScreensaver file." >> Add_Your_Own_Screensavers_temp.txt
+echo "You'll find your .xscreensaver file as a hidden file on your HOME directory" >> Add_Your_Own_Screensavers_temp.txt
+echo "Open the file and under the 'programs: ' line you can add your Screensaver " >> Add_Your_Own_Screensavers_temp.txt
+echo "" >> Add_Your_Own_Screensavers_temp.txt
+echo "[Example]" >> Add_Your_Own_Screensavers_temp.txt
+echo "programs:" >> Add_Your_Own_Screensavers_temp.txt
+echo "my_screensaver" mpv --start=00:00:00 \" >> Add_Your_Own_Screensavers_temp.txt
+echo "--no-stop-screensaver --fs \ " >> Add_Your_Own_Screensavers_temp.txt
+echo "--wid=$XSCREENSAVER_WINDOW \ " >> Add_Your_Own_Screensavers_temp.txt
+echo " /home/<my_user>/Screensavers_Custom/my_screensaver.mp4 \n\ " >> Add_Your_Own_Screensavers_temp.txt
+echo "" >> Add_Your_Own_Screensavers_temp.txt
+echo "And that's it! As long as mpv is working correctly it should run without an issue" >> Add_Your_Own_Screensavers_temp.txt
+ 
+ 
+#Copy it to the correct directory
+cp Add_Your_Own_Screensavers_temp.txt /home/$USER/Screensavers_Custom/Add_Your_Own_Screensavers.txt
+#Remove temporal setup file
+rm -f Add_Your_Own_Screensavers_temp.txt
+
+#Restart XScreensaver to save changes
+xscreensaver-command -restart
 
                       ##Need to test this before proceeding! :3
 
