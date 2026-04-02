@@ -1,5 +1,5 @@
-#This is intended for Linux Mint, different distros might have different procedures
-#As of April 1st 2026 this script is largely untested, I've just copied some command terminals from youtube + mint forums
+#This is intended for Cinnammon Linux Mint, different distros might have different procedures
+#As of April 2nd 2026 this script is functional but requires more testing
 #so I don't know if it will go trough completely or if this methods work with current version of mint
 
 
@@ -40,9 +40,10 @@ echo "Name=XScreensaver" >> XScreensaver_temp_setup.desktop
 echo "Comment=Xscreensaver launcher" >> XScreensaver_temp_setup.desktop
 echo "X-GNOME-Autostart-Delay=35" >> XScreensaver_temp_setup.desktop
 
-#Add as Startup
+#Copy as Startup
 sudo cp XScreensaver_temp_setup.desktop /home/$USER/.config/autostart/XScreensaver.desktop
-#User is a variable, hope I'm invoking correctly the directory !!!!!!!
+#Is sudo neccesary here? Using it blocked the file apparently
+#More testing if that's an issue
 
 #Remove temporal setup file
 rm -f XScreensaver_temp_setup.desktop
@@ -102,7 +103,7 @@ rm -f Add_Your_Own_Screensavers_temp.txt
 #Restart XScreensaver to save changes
 xscreensaver-command -restart
 
-                      ##Need to test this before proceeding! :3
+#More testing needed, partially functional confirmed!
 
 
 
