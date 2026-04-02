@@ -90,9 +90,11 @@ echo "programs:" >> Add_Your_Own_Screensavers_temp.txt
 echo '"my_screensaver" mpv --start=00:00:00 \' >> Add_Your_Own_Screensavers_temp.txt
 echo '--no-stop-screensaver --fs \ ' >> Add_Your_Own_Screensavers_temp.txt
 echo '--wid=$XSCREENSAVER_WINDOW \ ' >> Add_Your_Own_Screensavers_temp.txt
-echo ' /home/<my_user>/Screensavers_Custom/my_screensaver.mp4 \ n\  <--(The \ n\ without a space before the n)' >> Add_Your_Own_Screensavers_temp.txt
+echo ' /home/<my_user>/Screensavers_Custom/my_screensaver.mp4 _replacethis_  <--(The _replacethis_ without a space before the n)' >> Add_Your_Own_Screensavers_temp.txt
 echo "" >> Add_Your_Own_Screensavers_temp.txt
 echo "And that's it! As long as mpv is working correctly it should run without an issue" >> Add_Your_Own_Screensavers_temp.txt
+#Last line doesn't write correctly
+sed -i 's/_replacethis_/\\\\n\\\\/g' Add_Your_Own_Screensavers_temp.txt
  
  
 #Copy it to the correct directory
