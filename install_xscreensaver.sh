@@ -66,7 +66,7 @@ echo "Mpv should be installed now!"
 mkdir /home/$USER/Screensavers_Custom
 #Add Windows 98 "Travel" Screensaver
 cp Travel.mp4 /home/$USER/Screensavers_Custom/Travel.mp4
-sed -i 's@programs:@programs:	"Win98_Travel" 	mpv --start=00:00:00 \--no-stop-screensaver --fs \--wid=$XSCREENSAVER_WINDOW \/home/hp/ScreenSavers/Travel.mp4 \n\@' /home/$USER/.xscreensaver    
+sed -i 's@programs:@programs:	"Win98_Travel" 	mpv --start=00:00:00 \--no-stop-screensaver --fs \--wid=$XSCREENSAVER_WINDOW \/home/hp/ScreenSavers/Travel.mp4 \n\@' ~/.xscreensaver   
 #Don't know if the path is correct :c
 
 #Add Windows 95 "Mistery" Screensaver
