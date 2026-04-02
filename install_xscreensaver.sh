@@ -86,10 +86,10 @@ echo "Open the file and under the 'programs: ' line you can add your Screensaver
 echo "" >> Add_Your_Own_Screensavers_temp.txt
 echo "[Example]" >> Add_Your_Own_Screensavers_temp.txt
 echo "programs:" >> Add_Your_Own_Screensavers_temp.txt
-echo "my_screensaver" mpv --start=00:00:00 \" >> Add_Your_Own_Screensavers_temp.txt
-echo "--no-stop-screensaver --fs \ " >> Add_Your_Own_Screensavers_temp.txt
-echo "--wid=$XSCREENSAVER_WINDOW \ " >> Add_Your_Own_Screensavers_temp.txt
-echo " /home/<my_user>/Screensavers_Custom/my_screensaver.mp4 \n\ " >> Add_Your_Own_Screensavers_temp.txt
+echo '"my_screensaver" mpv --start=00:00:00 \' >> Add_Your_Own_Screensavers_temp.txt
+echo '--no-stop-screensaver --fs \ ' >> Add_Your_Own_Screensavers_temp.txt
+echo '--wid=$XSCREENSAVER_WINDOW \ ' >> Add_Your_Own_Screensavers_temp.txt
+echo ' /home/<my_user>/Screensavers_Custom/my_screensaver.mp4 \ n\  <--(The \ n\ without a space before the n)' >> Add_Your_Own_Screensavers_temp.txt
 echo "" >> Add_Your_Own_Screensavers_temp.txt
 echo "And that's it! As long as mpv is working correctly it should run without an issue" >> Add_Your_Own_Screensavers_temp.txt
  
