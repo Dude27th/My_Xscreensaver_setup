@@ -41,8 +41,10 @@ echo "Comment=Xscreensaver launcher" >> XScreensaver_temp_setup.desktop
 echo "X-GNOME-Autostart-Delay=35" >> XScreensaver_temp_setup.desktop
 
 #Copy as Startup
-sudo cp XScreensaver_temp_setup.desktop /home/$USER/.config/autostart/XScreensaver.desktop
-#Is sudo neccesary here? Using it blocked the file apparently
+cp XScreensaver_temp_setup.desktop /home/$USER/.config/autostart/XScreensaver.desktop
+#sudo cp XScreensaver_temp_setup.desktop /home/$USER/.config/autostart/XScreensaver.desktop
+
+#Is sudo neccesary here?
 #More testing if that's an issue
 
 #Remove temporal setup file
