@@ -12,7 +12,7 @@ sudo apt install xscreensaver xscreensaver-data-extra xscreensaver-gl-extra
 #some testing is needed before checking is working properly
 
 #Stop Cinnamon Screensaver (if running)
-killall cinnamon-screensaver
+#killall cinnamon-screensaver  #Possible hang at this command
 
 #Disable screen locking
 gsettings set org.cinnamon.desktop.screensaver lock-enabled false
